@@ -1,24 +1,15 @@
 package com.achot.bcstest.model;
 
 import java.util.List;
-import java.util.stream.Collectors;
-
-import static java.util.stream.Collectors.toList;
+import java.util.Objects;
 
 public class PortfolioEval {
     private double value;
     private List<Allocation> allocations;
 
-    public PortfolioEval(InputStocks inputStocks) {
-        // Create a map from stock symbols to the associated latest price
-        List<StockWithPrice> withPrices = inputStocks.getStocks().stream().map(StockWithPrice::new).collect(toList());
-        this.value = withPrices.stream().mapToDouble(StockWithPrice::totalValue).sum();
-        this.allocations = withPrices.stream()
-                .collect(Collectors.groupingBy(StockWithPrice::getSector))
-                .values()
-                .stream()
-                .map(stocks -> Allocation.fromPrices(stocks, this.value))
-                .collect(toList());
+    public PortfolioEval(double value, List<Allocation> allocations) {
+        this.value = value;
+        this.allocations = allocations;
     }
 
     public double getValue() {
@@ -34,7 +25,7 @@ public class PortfolioEval {
         private final double assetValue;
         private final double proportion;
 
-        Allocation(String sector, double assetValue, double proportion) {
+        public Allocation(String sector, double assetValue, double proportion) {
             this.sector = sector;
             this.assetValue = assetValue;
             this.proportion = proportion;
@@ -58,11 +49,28 @@ public class PortfolioEval {
             return proportion;
         }
 
-        static Allocation fromPrices(List<StockWithPrice> stocks, double totalValue) {
-            String sector = stocks.get(0).getSector();
-            double assetValue = stocks.stream().mapToDouble(StockWithPrice::totalValue).sum();
-            double proportion = assetValue / totalValue;
-            return new Allocation(sector, proportion, assetValue);
+        @Override
+        public String toString() {
+            return "Allocation{" +
+                    "sector='" + sector + '\'' +
+                    ", assetValue=" + assetValue +
+                    ", proportion=" + proportion +
+                    '}';
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Allocation that = (Allocation) o;
+            return Double.compare(that.assetValue, assetValue) == 0 &&
+                    Double.compare(that.proportion, proportion) == 0 &&
+                    Objects.equals(sector, that.sector);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(sector, assetValue, proportion);
         }
     }
 }

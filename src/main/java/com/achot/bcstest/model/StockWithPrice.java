@@ -4,9 +4,9 @@ public class StockWithPrice {
     private InputStocks.Stock inputStock;
     private IEXTradingStockPrice price;
 
-    public StockWithPrice(InputStocks.Stock inputStock) {
+    public StockWithPrice(InputStocks.Stock inputStock, IEXTradingStockPrice stockPrice) {
         this.inputStock = inputStock;
-        this.price = IEXTradingStockPrice.fetch(inputStock.getSymbol());
+        this.price = stockPrice;
     }
 
     /**
