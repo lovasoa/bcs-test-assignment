@@ -1,4 +1,4 @@
-# bcs-test-assignment
+# Spring boot test backend
 
 ## Running instructions
 
