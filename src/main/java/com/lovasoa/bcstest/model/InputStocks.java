@@ -1,4 +1,4 @@
-package com.achot.bcstest.model;
+package com.lovasoa.bcstest.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

@@ -1,4 +1,4 @@
-package com.achot.bcstest.model;
+package com.lovasoa.bcstest.model;
 
 public class StockWithPrice {
     private InputStocks.Stock inputStock;

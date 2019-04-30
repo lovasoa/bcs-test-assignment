@@ -1,9 +1,9 @@
-package com.achot.bcstest;
+package com.lovasoa.bcstest;
 
 
-import com.achot.bcstest.logic.PortfolioEvaluator;
-import com.achot.bcstest.model.InputStocks;
-import com.achot.bcstest.model.PortfolioEval;
+import com.lovasoa.bcstest.logic.PortfolioEvaluator;
+import com.lovasoa.bcstest.model.InputStocks;
+import com.lovasoa.bcstest.model.PortfolioEval;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

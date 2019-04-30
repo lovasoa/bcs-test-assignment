@@ -1,9 +1,9 @@
-package com.achot.bcstest.logic;
+package com.lovasoa.bcstest.logic;
 
-import com.achot.bcstest.model.IEXTradingStockPrice;
-import com.achot.bcstest.model.InputStocks;
-import com.achot.bcstest.model.PortfolioEval;
-import com.achot.bcstest.model.StockWithPrice;
+import com.lovasoa.bcstest.model.IEXTradingStockPrice;
+import com.lovasoa.bcstest.model.InputStocks;
+import com.lovasoa.bcstest.model.PortfolioEval;
+import com.lovasoa.bcstest.model.StockWithPrice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

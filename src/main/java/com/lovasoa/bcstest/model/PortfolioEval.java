@@ -1,4 +1,4 @@
-package com.achot.bcstest.model;
+package com.lovasoa.bcstest.model;
 
 import java.util.List;
 import java.util.Objects;

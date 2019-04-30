@@ -1,4 +1,4 @@
-package com.achot.bcstest;
+package com.lovasoa.bcstest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

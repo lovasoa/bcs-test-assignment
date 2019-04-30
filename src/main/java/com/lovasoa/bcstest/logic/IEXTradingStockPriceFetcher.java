@@ -1,6 +1,6 @@
-package com.achot.bcstest.logic;
+package com.lovasoa.bcstest.logic;
 
-import com.achot.bcstest.model.IEXTradingStockPrice;
+import com.lovasoa.bcstest.model.IEXTradingStockPrice;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;

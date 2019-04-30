@@ -1,4 +1,4 @@
-package com.achot.bcstest;
+package com.lovasoa.bcstest;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

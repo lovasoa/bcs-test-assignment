@@ -1,8 +1,8 @@
-package com.achot.bcstest.logic;
+package com.lovasoa.bcstest.logic;
 
-import com.achot.bcstest.model.IEXTradingStockPrice;
-import com.achot.bcstest.model.InputStocks;
-import com.achot.bcstest.model.PortfolioEval;
+import com.lovasoa.bcstest.model.IEXTradingStockPrice;
+import com.lovasoa.bcstest.model.InputStocks;
+import com.lovasoa.bcstest.model.PortfolioEval;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -11,7 +11,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
